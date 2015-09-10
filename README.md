@@ -29,10 +29,26 @@ http-server
 1. Explain what hoisting is. Provide your answer below.
 
   **Student answer: Hoisting is the name given for the order in which JavaScript loads parts of the script, specifically, that variables and functions (but not function expressions) defined in the global scope are instantiated before other code, regardless of where their definitions appear in the code flow.**
-  
+
 1. What is a callback? Why do we use them in JavaScript? Provide your answer, and code a simple example below.
 
-  **Student answer: **
+  **Student answer: A callback is a function passed into another function as an argument that is then executed from inside the function it was passed into.  We use them when we have a function that provides data or functionality that may occur with a delay or otherwise outside the normal code flow.  Passing the callback function into this delayed function and allowing the parent function to execute the passed-in callback ensures that the parent function has completed its duties before the code in the callback function is executed.**
+
+  *Example:*
+```
+function foo(arg1, arg2) {
+  var bar = arg1 + arg2;
+  return bar;
+}
+
+function fizz(arg1, callback) {
+  var buzz = arg1 * 23;
+  var fizzbuzz = arg1 / arg1 - 5;
+  callback.call(this, buzz, fizzbuzz);
+}
+
+fizz(foo);
+```
 
 ## Functions and operators
 

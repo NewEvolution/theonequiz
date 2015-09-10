@@ -9,3 +9,4 @@ domTarget.innerHTML = "This content generated with vanilla JavaScript";
 // 8
 $("#jquery_output").html("This content generated with jQuery");
 
+// Functions and operators ######################
