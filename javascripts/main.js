@@ -10,3 +10,9 @@ domTarget.innerHTML = "This content generated with vanilla JavaScript";
 $("#jquery_output").html("This content generated with jQuery");
 
 // Functions and operators ######################
+
+// 1
+function modulus(arg1, arg2) {
+  var remainder = arg1 % arg2;
+  return remainder;
+}
