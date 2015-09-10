@@ -10,7 +10,8 @@ var FruitMaker = function() {
       return fruitArr;
     },
     addFruit: function(fruit) {
-      fruitArr.push(fruit);
+      fruitArr[fruitArr.length] = fruit;
+      return fruitArr;
     }
   };
 }();

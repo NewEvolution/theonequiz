@@ -17,24 +17,48 @@ function modulus(arg1, arg2) {
   return remainder;
 }
 
+// 2
+function doMath(integer1, integer2, mathFunction) {
+  return mathFunction(integer1, integer2);
+}
+
+function add(integer1, integer2) {
+  return integer1 + integer2;
+}
+
+function subtract(integer1, integer2) {
+  return integer1 - integer2;
+}
+
 // Arrays #######################################
 
 // 1
-function sortedPlanets(array) {
-  var sortedArray = array.sort();
+function sortedPlanets() {
+  var sortedArray = Planets.sort();
   return sortedArray;
 }
 
 // 2
-function reversedPlanets(array) {
+function reversedPlanets() {
   var reversedArray = [];
-  for (var i = 0; i < array.length; i++) {
-    var planetLetters = array[i].split("");
+  for (var i = 0; i < Planets.length; i++) {
+    var planetLetters = Planets[i].split("");
     planetLetters.reverse();
     var backwardsPlanet = planetLetters.join("");
     reversedArray[reversedArray.length] = backwardsPlanet;
   }
   return reversedArray;
+}
+
+// 3
+function longPlanets() {
+  var longArray = [];
+  for (var i = 0; i < Planets.length; i++) {
+    if (Planets[i].charAt(6) !== "") {
+      longArray.push(Planets[i]);
+    }
+  }
+  return longArray;
 }
 
 // XHR ##########################################

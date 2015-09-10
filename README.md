@@ -107,7 +107,7 @@ thePromise.then(function(data) {
 
 What gets logged to the console when the following code executes? Explain why.
 
-**Student answer: **
+**Student answer: See comments below**
 
 ```
 var answer = "42"; // defined in global scope
