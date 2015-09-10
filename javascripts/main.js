@@ -36,3 +36,14 @@ function reversedPlanets(array) {
   }
   return reversedArray;
 }
+
+// XHR ##########################################
+
+// 1
+function getAnimals() {
+  $.ajax({
+    url: "../data/animals.json"
+  }).done(function(data) {
+    console.log("animals", data.animals);
+  });
+}
