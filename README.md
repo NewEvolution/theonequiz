@@ -96,7 +96,9 @@ var getAnimals = function() {
   return deferred.promise
 }
 
-getAnimals().then(function(data) {
+var thePromise = getAnimals();
+
+thePromise.then(function(data) {
   console.log("animals", data.animals);
 })
 ```
@@ -115,13 +117,13 @@ function steve() {
 }
 
 function luke() {
-  var answer = "0"; // internal to luke
+  var answer = "0"; // defined internal to luke
   greg(answer);     // but passed to greg
 }
 
 function greg(answer) {
-  var answer = "666";         // internal to greg but...
-  console.log( this.answer ); // this refers to where the call was made and...
+  var answer = "666";         // defined internal to greg but...
+  console.log( this.answer ); // 'this' refers to where the call was made and...
 }
 
 steve(); // Call happens here! - global scope
