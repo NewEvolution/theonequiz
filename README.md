@@ -108,22 +108,22 @@ What gets logged to the console when the following code executes? Explain why.
 **Student answer: **
 
 ```
-var answer = "42";
+var answer = "42"; // defined in global scope
 
 function steve() {
-  luke();
+  luke(); // calls luke
 }
 
 function luke() {
-  var answer = "0";
-  greg(answer);
+  var answer = "0"; // internal to luke
+  greg(answer);     // but passed to greg
 }
 
 function greg(answer) {
-  var answer = "666";
-  console.log( this.answer );
+  var answer = "666";         // internal to greg but...
+  console.log( this.answer ); // this refers to where the call was made and...
 }
 
-steve();
+steve(); // Call happens here! - global scope
 ```
 
