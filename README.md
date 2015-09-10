@@ -44,10 +44,10 @@ function foo(arg1, arg2) {
 function fizz(arg1, callback) {
   var buzz = arg1 * 23;
   var fizzbuzz = arg1 / arg1 - 5;
-  callback.call(this, buzz, fizzbuzz);
+  callback(buzz, fizzbuzz);
 }
 
-fizz(foo);
+fizz(232, foo);
 ```
 
 ## Functions and operators
