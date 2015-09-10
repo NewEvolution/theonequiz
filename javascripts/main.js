@@ -16,3 +16,23 @@ function modulus(arg1, arg2) {
   var remainder = arg1 % arg2;
   return remainder;
 }
+
+// Arrays #######################################
+
+// 1
+function sortedPlanets(array) {
+  var sortedArray = array.sort();
+  return sortedArray;
+}
+
+// 2
+function reversedPlanets(array) {
+  var reversedArray = [];
+  for (var i = 0; i < array.length; i++) {
+    var planetLetters = array[i].split("");
+    planetLetters.reverse();
+    var backwardsPlanet = planetLetters.join("");
+    reversedArray[reversedArray.length] = backwardsPlanet;
+  }
+  return reversedArray;
+}
