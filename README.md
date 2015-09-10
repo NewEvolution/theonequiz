@@ -28,7 +28,8 @@ http-server
 ## JavaScript concepts
 1. Explain what hoisting is. Provide your answer below.
 
-  **Student answer: **
+  **Student answer: Hoisting is the name given for the order in which JavaScript loads parts of the script, specifically, that variables and functions (but not function expressions) defined in the global scope are instantiated before other code, regardless of where their definitions appear in the code flow.**
+  
 1. What is a callback? Why do we use them in JavaScript? Provide your answer, and code a simple example below.
 
   **Student answer: **
